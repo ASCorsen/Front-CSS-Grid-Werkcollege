@@ -1,1 +1,99 @@
 /*Maak hier jouw CSS!*/
+header {
+    grid-area: header;
+    background-color: #D3D5D4;
+}
+main {
+    grid-area: main;
+    background-color: #A2C5AC;
+}
+aside {
+    grid-area: aside;
+    background-color: #9DB5B2;
+}
+.section-d {
+    grid-area: section-d;
+    background-color: #878E99;
+}
+.section-e {
+    grid-area: section-e;
+    background-color: #7F6A93;
+}
+footer {
+    grid-area: footer;
+    background-color: lightgreen;
+}
+/*For desktop screens*/
+@media screen and (min-width: 1025px) {
+    .container {
+        display: grid;
+        background-color: #C7EAE4;
+        /*grid-template-columns: 100%;*/
+        /*grid-template-rows: repeat(auto, 7);*/
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px auto 50px 50px 50px 50px 50px;
+        grid-gap: 16px;
+        grid-template-areas:
+            "header"
+            "main"
+            "aside"
+            "section-d"
+            "section-e"
+            " . "
+            "footer";
+    }
+}
+/* For mobile phones: */
+@media screen and (min-width: 576px) {
+    .container {
+        display: grid;
+        background-color: #C7EAE4;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: 50px 240px 100px auto 50px;
+        grid-gap: 16px;
+
+        grid-template-areas:
+            "header aside aside"
+            "main aside aside"
+            "main section-e section-d"
+            "main section-e . "
+            "footer footer footer";
+    }
+}
+
+
+
+/*    grid-template-areas:*/
+/*            "header large-content large-content"*/
+/*            "content large-content large-content"*/
+/*            "content medium-content large-content"*/
+/*            "content medium-content dynamisch"*/
+/*            "footer footer footer";*/
+/*}*/
+
+/*.header {*/
+/*    grid-area: header;*/
+/*}*/
+
+/*.content {*/
+/*    grid-area: content;*/
+/*}*/
+/*.large-content {*/
+/*    grid-area: large-content;*/
+/*}*/
+
+/*.medium-content {*/
+/*    grid-area: medium-content;*/
+/*}*/
+
+/*.small-content {*/
+/*    grid-area: small-content;*/
+/*}*/
+
+/*.dynamisch {*/
+/*    grid-area: dynamisch;*/
+/*}*/
+/*.footer {*/
+/*    grid-area: footer;*/
+/*}*/
+
